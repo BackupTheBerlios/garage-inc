@@ -1,0 +1,7 @@
+#ifndef __WAREHOUSEINVOICE_H__
+#define __WAREHOUSEINVOICE_H__
+
+void WAREHOUSEINVOICE_Init();
+void WAREHOUSEINVOICE_Open();
+
+#endif /* __WAREHOUSEINVOICE_H__ */

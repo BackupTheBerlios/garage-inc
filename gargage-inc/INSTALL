@@ -1,0 +1,8 @@
+Om garage-inc te installeren typ je het volgende:
+
+   1. ./configure
+   2. make
+   3. su <password>
+   4. make install
+
+Mochten er tussen de stappen problemen ontstaan stuur dan een email (stefanbeuving@home.nl) met de foutmelding.

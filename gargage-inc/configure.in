@@ -1,0 +1,44 @@
+
+dnl Process this file with autoconf to produce a configure script
+AC_INIT(configure.in)
+AM_INIT_AUTOMAKE(garage-inc , 1.0)
+AM_CONFIG_HEADER(config.h)
+
+AC_PREFIX_DEFAULT(/usr)
+
+DATADIRNAME=share
+
+have_alsa_final=no
+# Checks for programs
+
+AC_PROG_CC
+AC_PROG_LIBTOOL
+
+
+# Check for SDL 
+SDL_VERSION=1.2.0
+
+# Checks for libraries
+AC_CHECK_LIB(SDL_image,IMG_Load)
+
+
+
+# Checks for header files
+AC_CHECK_HEADERS(SDL.h)
+
+#set correct directory
+DATADIR=share
+AC_SUBST(DATADIR)
+
+THEME_DIR="${ac_default_prefix}/${DATADIR}/${PACKAGE}/themes"
+AC_DEFINE_UNQUOTED( THEME_DIR, "${THEME_DIR}", [Theme dir])
+AC_SUBST(THEME_DIR)
+
+
+AC_OUTPUT([
+Makefile
+lib/Makefile
+lib/src/Makefile
+src/Makefile
+themes/Makefile
+])
